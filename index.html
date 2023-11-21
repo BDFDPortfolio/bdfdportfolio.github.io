@@ -2,7 +2,7 @@
  * @Date         : 2023-11-16 15:15:07
  * @Author       : BDFD,bdfd2005@gmail.com
  * @Github       : https://github.com/bdfd
- * @LastEditTime : 2023-11-17 17:39:49
+ * @LastEditTime : 2023-11-21 13:25:15
  * @LastEditors  : BDFD
  * @Description  : 
  * @FilePath     : \index.html
@@ -38,35 +38,22 @@
 
   <!-- Template Main CSS File -->
   <link href="static/css/style.css" rel="stylesheet">
-  <script>
-    function includeHTML() {
-      var z, i, elmnt, file, xhttp;
-      /* Loop through a collection of all HTML elements: */
-      z = document.getElementsByTagName("*");
-      for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        /*search for elements with a certain atrribute:*/
-        file = elmnt.getAttribute("include-html");
-        if (file) {
-          /* Make an HTTP request using the attribute value as the file name: */
-          xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function () {
-            if (this.readyState == 4) {
-              if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-              if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-              /* Remove the attribute, and call this function once more: */
-              elmnt.removeAttribute("include-html");
-              includeHTML();
-            }
-          }
-          xhttp.open("GET", file, true);
-          xhttp.send();
-          /* Exit the function: */
-          return;
-        }
-      }
-    }
-  </script>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/purecounter/purecounter.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/vendor/typed.js/typed.min.js"></script>
+  <script src="static/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/javascript/main.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/BDFD-Side-Project/Side_Project_Repo/Project_Script/JQuery/JQuery.js"></script>
 
 </head>
 
@@ -134,15 +121,16 @@
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <div include-html="porfolio-section/Section01-About.html"></div>
+    <!-- <div include-html="porfolio-section/Section01-About.html"></div> -->
+    <div id="About-Section"></div>
     <!-- End About Section -->
 
     <!-- ======= Facts Section ======= -->
-    <div include-html="porfolio-section/Section02-Fact.html"></div>
+    <div id="Fact-Section"></div>
     <!-- End Facts Section -->
 
     <!-- ======= Skills Section ======= -->
-    <div include-html="porfolio-section/Section03-Skill.html"></div>
+    <div id="Skil-Section"></div>
     <!-- End Skills Section -->
 
     <!-- ======= Experience Section ======= -->
@@ -180,21 +168,12 @@
     class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
-  <script src="static/vendor/aos/aos.js"></script>
-  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="static/vendor/php-email-form/validate.js"></script>
-  <script src="static/vendor/purecounter/purecounter.js"></script>
-  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="static/vendor/typed.js/typed.min.js"></script>
-  <script src="static/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="static/javascript/main.js"></script>
   <script>
-    includeHTML();
+    $(function () {
+      $("#About-Section").load("porfolio-section/Section01-About.html")
+      $("#Fact-Section").load("porfolio-section/Section02-Fact.html")
+      $("#Skil-Section").load("porfolio-section/Section03-Skill.html")
+    })
   </script>
 </body>
 
