@@ -2,7 +2,7 @@
  * @Date         : 2023-11-16 15:15:07
  * @Author       : BDFD,bdfd2005@gmail.com
  * @Github       : https://github.com/bdfd
- * @LastEditTime : 2023-11-21 13:25:15
+ * @LastEditTime : 2023-11-21 14:45:02
  * @LastEditors  : BDFD
  * @Description  : 
  * @FilePath     : \index.html
@@ -126,30 +126,30 @@
     <!-- End About Section -->
 
     <!-- ======= Facts Section ======= -->
-    <div id="Fact-Section"></div>
+    <div id="Facts-Section"></div>
     <!-- End Facts Section -->
 
     <!-- ======= Skills Section ======= -->
-    <div id="Skil-Section"></div>
+    <div id="Skills-Section"></div>
     <!-- End Skills Section -->
 
     <!-- ======= Experience Section ======= -->
     <!-- End Experience Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <div include-html="porfolio-section/Section04-Porfolio.html"></div>
+    <div id="Portfolios-Section"></div>
     <!-- End Portfolio Section -->
 
     <!-- ======= Services Section ======= -->
-    <div include-html="porfolio-section/Section05-Service.html"></div>
+    <div id="Services-Section"></div>
     <!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <div include-html="porfolio-section/Section06-Testimonial.html"></div>
+    <div id="Testimonials-Section"></div>
     <!-- End Testimonials Section -->
 
     <!-- ======= Contact Section ======= -->
-    <div include-html="porfolio-section/Section07-Contact.html"></div>
+    <div id="Contact-Section"></div>
     <!-- End Contact Section -->
 
   </main><!-- End #main -->
@@ -171,8 +171,12 @@
   <script>
     $(function () {
       $("#About-Section").load("porfolio-section/Section01-About.html")
-      $("#Fact-Section").load("porfolio-section/Section02-Fact.html")
-      $("#Skil-Section").load("porfolio-section/Section03-Skill.html")
+      $("#Facts-Section").load("porfolio-section/Section02-Fact.html")
+      $("#Skills-Section").load("porfolio-section/Section03-Skill.html")
+      $("#Portfolios-Section").load("porfolio-section/Section04-Porfolio.html")
+      $("#Services-Section").load("porfolio-section/Section05-Service.html")
+      $("#Testimonials-Section").load("porfolio-section/Section06-Testimonial.html")
+      $("#Contact-Section").load("porfolio-section/Section07-Contact.html")
     })
   </script>
 </body>
